@@ -14,10 +14,11 @@ const HeaderLogo: FC = (props: any) => {
           width={100}
           height={100}
           alt='Lorian store'
+          className='-mr-4'
         />
         <span>
-          <span className='text-white mb-4'>LORIAN</span>
-          <span className='text-gray tracking-wider'>STORE</span>
+          <span className='text-white tracking-[0.13em] block font-light'>LORIAN</span>
+          <span className='text-sm text-dark-gray tracking-[0.4em] block font-extralinght'>STORE</span>
         </span>
       </Link>
     </Column>
