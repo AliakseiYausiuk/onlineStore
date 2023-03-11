@@ -6,18 +6,20 @@ interface IColumn {
   isCenter?: boolean
   className?: string
   isPadding?: boolean
+  isBorder?: boolean
 }
 
 
-const Column: FC<PropsWithChildren<IColumn>> = ({ size, children, isCenter = true, className, isPadding = true }) => {
+const Column: FC<PropsWithChildren<IColumn>> = ({ size, children, isCenter = true, className, isPadding = true, isBorder = true }) => {
   return (
     <div
       style={{ gridColumn: `span ${size} / span ${size}` }}
       className={cn(
-        'border-r-2 border-black border-solid h-full flex items-center',
+        'h-full flex items-center',
         {
           'justify-center': isCenter,
-          'p-3': isPadding
+          'p-3': isPadding,
+          'border-r-2 border-black border-solid': isBorder
         },
         className)}
     >
